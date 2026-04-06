@@ -24,3 +24,9 @@ jobs:
     - name: Build for ARM64
       run: |
         GOOS=linux GOARCH=arm64 go build -v -o fake115uploader-arm64
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: fake115uploader-arm64-binary
+        path: fake115uploader-arm64
